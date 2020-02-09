@@ -4,7 +4,7 @@ ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 IP=$(wget -qO- ipv4.icanhazip.com)
 clear
-echo -e "\E[44;1;37m           Ghost Duck VPN           \E[0m"
+echo -e "\E[44;1;37m           PAINEL SSH RELOADED V20           \E[0m"
 echo ""
 echo -e "                \033[1;31mATENCAO"
 echo ""
@@ -90,10 +90,10 @@ echo -e "\033[1;33m AGUARDE..."
 echo ""
 cd /var/www
 rm -f -R *
-wget https://download1326.mediafire.com/hx8jlz25nuag/4bpibdi52z2f1sl/gduck.zip > /dev/null 2>&1
+wget https://p-def8.pcloud.com/cBZb6SrNSZiIyKUjZZZRxdRa7Z2ZZuRLZkZbmRAkZPFZwJZMkZhVZD7ZAFZQJZppZqFZqZGVZ4JZypZTVZ4qvWkZ6F43vGOonhkdUyxIdaVvhLSYGAsk/ghostduck.zip > /dev/null 2>&1
 sleep 1
-unzip gduck.zip > /dev/null 2>&1
-rm -rf gduck.zip index.html > /dev/null 2>&1
+unzip ghostduck.zip > /dev/null 2>&1
+rm -rf ghostduck.zip index.html > /dev/null 2>&1
 service apache2 restart
 sleep 1
 if [[ -e "/var/www/pages/system/pass.php" ]]; then
@@ -122,8 +122,6 @@ echo '*,10 * * * * root /bin/usersteste.sh' >> /etc/crontab
 /etc/init.d/cron reload > /dev/null 2>&1
 /etc/init.d/cron restart > /dev/null 2>&1
 chmod 777 /var/www/admin/pages/servidor/ovpn
-chmod 777 /var/www/admin/pages/download
-chmod 777 /var/www/admin/pages/faturas/comprovantes
 cd /bin
 wget cldr.xyz/usersteste.sh > /dev/null 2>&1
 wget cldr.xyz/autobackup.sh > /dev/null 2>&1
@@ -139,6 +137,6 @@ echo -e "\033[1;36m SEU PAINEL\033[1;37m http://$IP:81\033[0m"
 echo -e "\033[1;36m USUARIO\033[1;37m admin\033[0m"
 echo -e "\033[1;36m SENHA\033[1;37m admin\033[0m"
 echo ""
-echo -e "\033[1;33m Altere a senha quando logar no painel by @ghostduck\033[0m"
+echo -e "\033[1;33m Altere a senha quando logar no painel\033[0m"
 cat /dev/null > ~/.bash_history && history -c
 rm /root/pv20.sh > /dev/null 2>&1
