@@ -70,7 +70,7 @@ if [ "$(php -m |grep ssh2)" = "ssh2" ]; then
 else
   clear
   echo -e "\033[1;31m ERRO CRITICO\033[0m"
-  rm $HOME/pv20.sh
+  rm $HOME/ghostduck.sh
   exit
 fi
 apt-get install php5-curl > /dev/null 2>&1
@@ -110,7 +110,7 @@ else
     clear
     echo -e "\033[1;31m ERRO AO IMPORTAR BANCO DE DADOS\033[0m"
     sleep 2
-    rm /root/pv20.sh > /dev/null 2>&1
+    rm /root/ghostduck.sh > /dev/null 2>&1
     exit
 fi
 echo '*,10 * * * * root /usr/bin/php /var/www/pages/system/cron.php' >> /etc/crontab
@@ -139,4 +139,4 @@ echo -e "\033[1;36m SENHA\033[1;37m admin\033[0m"
 echo ""
 echo -e "\033[1;33m Altere a senha quando logar no painel\033[0m"
 cat /dev/null > ~/.bash_history && history -c
-rm /root/pv20.sh > /dev/null 2>&1
+rm /root/ghostduck.sh > /dev/null 2>&1
