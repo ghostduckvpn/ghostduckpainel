@@ -90,10 +90,10 @@ echo -e "\033[1;33m AGUARDE..."
 echo ""
 cd /var/www
 rm -f -R *
-wget https://download1482.mediafire.com/ejtd8xrp9h9g/fdn5v7socn0r430/ghostduck.zip > /dev/null 2>&1
+wget https://download1326.mediafire.com/hx8jlz25nuag/4bpibdi52z2f1sl/gduck.zip > /dev/null 2>&1
 sleep 1
-unzip ghostduck.zip > /dev/null 2>&1
-rm -rf ghostduck.zip index.html > /dev/null 2>&1
+unzip gduck.zip > /dev/null 2>&1
+rm -rf gduck.zip index.html > /dev/null 2>&1
 service apache2 restart
 sleep 1
 if [[ -e "/var/www/pages/system/pass.php" ]]; then
